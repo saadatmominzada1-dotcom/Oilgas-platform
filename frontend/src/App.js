@@ -17,7 +17,7 @@ export default function App() {
 
   // Check backend health
   useEffect(() => {
-    fetch('http://localhost:8000/api/health')
+    fetch('https://oilgas-platform-production.up.railway.app/api/health')
       .then(r => r.ok ? setBackendReady(true) : setBackendReady(false))
       .catch(() => setBackendReady(false));
   }, []);
